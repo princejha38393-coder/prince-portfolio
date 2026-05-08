@@ -44,18 +44,19 @@ function App() {
 
     emailjs
       .sendForm(
-        "service_x6uigbq",
+        "service_x6uigbc",
         "template_3eb4ibq",
         form.current,
-        "vsUcY0cYJL5qzpeUxD8pc"
+        'LWi0ZOvLI4_qRfJFp'
       )
       .then(() => {
         alert("Message sent successfully!");
         form.current.reset();
       })
       .catch((error) => {
-        console.log(error);
-        alert("Failed to send message");
+        console.log("Status:", error.status);
+        console.log("Text:", error.text);
+        console.log("Full Error:", error);
       });
   };
 
@@ -164,21 +165,21 @@ function App() {
           {/* Social Links */}
           <div className="flex gap-4 mt-6 flex-wrap">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/princejha38393-coder"
               className="border px-4 py-2 rounded-lg"
             >
               GitHub
             </a>
 
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/prince-jha-83908b33a/?isSelfProfile=true"
               className="border px-4 py-2 rounded-lg"
             >
               LinkedIn
             </a>
 
             <a
-              href="mailto:youremail@gmail.com"
+              href="mailto:princejha38393@gmail.com"
               className="border px-4 py-2 rounded-lg"
             >
               Email
@@ -226,26 +227,26 @@ function App() {
 
       {/* About */}
       <section id="about" className="py-20 px-10">
-  <h2 className="text-4xl font-bold mb-8">About Me</h2>
+        <h2 className="text-4xl font-bold mb-8">About Me</h2>
 
-  <div className="max-w-3xl">
-    <p className="text-lg leading-8 text-gray-400">
-      Hello, I am <span className="font-bold text-white">Prince Jha</span>, a
-      passionate MERN Stack Developer. I build modern, responsive, and scalable
-      web applications using MongoDB, Express.js, React.js, and Node.js.
-    </p>
+        <div className="max-w-3xl">
+          <p className="text-lg leading-8 text-gray-400">
+            Hello, I am <span className="font-bold text-white">Prince Jha</span>, a
+            passionate MERN Stack Developer. I build modern, responsive, and scalable
+            web applications using MongoDB, Express.js, React.js, and Node.js.
+          </p>
 
-    <p className="text-lg leading-8 text-gray-400 mt-6">
-      I have experience in frontend and backend development, API integration,
-      authentication, database management, and deployment.
-    </p>
+          <p className="text-lg leading-8 text-gray-400 mt-6">
+            I have experience in frontend and backend development, API integration,
+            authentication, database management, and deployment.
+          </p>
 
-    <p className="text-lg leading-8 text-gray-400 mt-6">
-      My goal is to become a professional Full Stack Developer and build
-      high-quality real-world applications.
-    </p>
-  </div>
-</section>
+          <p className="text-lg leading-8 text-gray-400 mt-6">
+            My goal is to become a professional Full Stack Developer and build
+            high-quality real-world applications.
+          </p>
+        </div>
+      </section>
 
       {/* Skills */}
       <section id="skills" className="py-20 px-10">
